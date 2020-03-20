@@ -49,8 +49,8 @@ app.post('/imageurl', (req, res) => {
 //      console.log('app is running on port 3000')
 //  })
 
-app.listen(3000, () => {
-    console.log('App connected on port 3000')
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`App connected on port ${process.env.PORT}`)
 })
 
 // Another way to define the app port number
