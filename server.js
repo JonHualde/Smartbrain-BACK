@@ -20,7 +20,7 @@ const db = knex({
     database : 'smart-brain'
   }
 })
-
+// 
 app.use(express.json());
 app.use(cors());
  
