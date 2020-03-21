@@ -20,7 +20,9 @@ const db = knex({
     database : 'smart-brain'
   }
 })
-// 
+
+const app = express();
+
 app.use(express.json());
 app.use(cors());
  
@@ -45,17 +47,6 @@ app.post('/imageurl', (req, res) => {
     image.handleApiCall(req, res)
  })
 
-//  app.listen(3000, () => {
-//      console.log('app is running on port 3000')
-//  })
-
 app.listen(process.env.PORT || 3000, () => {
     console.log(`App connected on port ${process.env.PORT}`)
 })
-
-// Another way to define the app port number
-// const PORT = process.env.PORT
-// console.log(`server is running on ${PORT}`)
-
-// "In the bash console": PORT=3000 node server.js
-// The PORT variable will be equal to 3000 in this case
